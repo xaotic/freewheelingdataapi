@@ -18,8 +18,8 @@ Freewheelingnc.register(function(app, auth, database) {
 
     //We are adding a link to the main menu for all authenticated users
     Freewheelingnc.menus.add({
-        title: 'freewheelingnc example page',
-        link: 'freewheelingnc example page',
+        title: 'Bike Routes',
+        link: 'show routes',
         roles: ['authenticated'],
         menu: 'main'
     });

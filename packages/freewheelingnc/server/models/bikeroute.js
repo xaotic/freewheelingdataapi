@@ -10,7 +10,9 @@ var mongoose = require('mongoose'),
  * Route Schema
  */
 var RouteSchema = new Schema({
-    id: Number,
+    _id: {
+        $oid: String
+    },
     route: {
         type: String,
         coordinates: [{
@@ -23,10 +25,11 @@ var RouteSchema = new Schema({
     safety: Number
 });
 
-RouteSchema.methods = {
-    isEasyRoute : function(){
-        return this.difficulty <= 5;
+RouteSchema.statics = {
+    load: function(id, cb) {
+        this.findOne({
+            _id: id
+        }).populate('bikeRoute').exec(cb);
     }
 };
-
-mongoose.model('BikeRoute',RouteSchema);
+mongoose.model('BikeRoute', RouteSchema);
