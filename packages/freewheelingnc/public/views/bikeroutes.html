@@ -1,6 +1,11 @@
 <div class="" data-ng-controller="FreewheelingncController" data-ng-init="getAllRoutes()">
 	<h1>Bike Routes Will Be Here </h1>
 	<ul>
-		<li data-ng-repeat="route in bikeRoutes">Latitude: {{route}}</li>
+		<li data-ng-repeat="bikeRoute in bikeRoutes">
+			{{bikeRoute}} 
+			<a class="btn" data-ng-click="remove(bikeRoute);">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</li>
 	</ul>
 </div>

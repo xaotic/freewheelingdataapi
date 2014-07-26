@@ -20,3 +20,17 @@ exports.all = function(req, res) {
 
     });
 };
+
+exports.destroy = function(req, res) {
+    var bikeRoute = req.bikeRoute;
+
+    BikeRoute.remove(function(err) {
+        if (err) {
+            return res.json(500, {
+                error: 'Cannot delete the bike route'
+            });
+        }
+        res.json(bikeRoute);
+
+    });
+};

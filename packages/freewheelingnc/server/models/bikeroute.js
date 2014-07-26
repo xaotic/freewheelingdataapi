@@ -14,7 +14,6 @@ var RouteSchema = new Schema({
         $oid: String
     },
     route: {
-        type: String,
         coordinates: [{
             lat: Number,
             lng: Number
