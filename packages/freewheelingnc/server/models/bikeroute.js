@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
+
 /**
  * Route Schema
  */
@@ -13,12 +14,7 @@ var RouteSchema = new Schema({
     _id: {
         $oid: String
     },
-    route: {
-        coordinates: [{
-            lat: Number,
-            lng: Number
-        }]
-    },
+    coordinates: [Schema.Types.Array],
     purpose: String,
     difficulty: Number,
     safety: Number

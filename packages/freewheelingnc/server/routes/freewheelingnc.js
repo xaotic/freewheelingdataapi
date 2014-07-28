@@ -5,7 +5,7 @@ var bikeRoutes = require('../controllers/bikeroute');
 module.exports = function(Freewheelingnc, app, auth, database) {
 
     app.route('/bikeroutes')
-        .get(bikeRoutes.all);
-    app.route('/bikeroutes')
-        .delete(bikeRoutes.destroy);
+        .get(bikeRoutes.all)
+        .delete(bikeRoutes.destroy)
+        .post(bikeRoutes.create);
 };

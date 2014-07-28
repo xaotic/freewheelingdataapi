@@ -34,3 +34,19 @@ exports.destroy = function(req, res) {
 
     });
 };
+
+/**
+ * Create an bikeRoute
+ */
+exports.create = function(req, res) {
+    var bikeRoute = new BikeRoute(req.body);
+    bikeRoute.save(function(err) {
+        if (err) {
+            return res.json(500, {
+                error: 'Cannot save the route'
+            });
+        }
+        res.json(bikeRoute);
+
+    });
+};
