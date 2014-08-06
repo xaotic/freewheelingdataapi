@@ -37,3 +37,50 @@ $ npm install -g grunt-cli
   Then, open a browser and go to:
 
     http://localhost:3000
+
+## API endpoints and uses available
+
+### Get Bike Routes
+
+  #### Request
+
+  $ GET http://localhost:3000/bikeroutes
+
+  #### Response
+  <pre>
+  [
+    {
+        "_id": "53d42881e4b0c8cc2d3dfe5b",
+        "coordinates": [
+            [
+                -78.560142517089844,
+                35.777435736805643
+            ],
+            [
+                -78.550872802734375,
+                35.776321586067269
+            ],
+            
+        ],
+        "difficulty": 10,
+        "purpose": "Work Commute",
+        "safety": 1
+    },
+    {
+        "_id": "53d42881e4b0c8cc2d3dfe5b",
+        "coordinates": [
+            [
+                -78.632755279541016,
+                35.772491573832305
+            ],
+            [
+                -78.632326126098633,
+                35.780151413822807
+            ]
+        ],
+        "difficulty": 2,
+        "purpose": "Lunch",
+        "safety": 8
+    }
+  ]
+  </pre>
