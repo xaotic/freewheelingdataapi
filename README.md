@@ -84,3 +84,51 @@ $ npm install -g grunt-cli
     }
   ]
   </pre>
+
+  #### Request
+  $ POST http://localhost:3000/bikeroutes
+
+  ##### Body
+  <pre>
+  {
+        "coordinates": [
+            [
+                -78.560142517089844,
+                35.777435736805643
+            ],
+            [
+                -78.550872802734375,
+                35.776321586067269
+            ]            
+        ],
+        "difficulty": 10,
+        "purpose": "Work Commute",
+        "safety": 1
+    }
+  </pre>
+
+  #### Response
+  <pre>
+    {
+    "__v": 0,
+    "difficulty": 10,
+    "purpose": "Work Commute",
+    "safety": 1,
+    "coordinates": [
+        [
+            -78.56014251708984,
+            35.77743573680564
+        ],
+        [
+            -78.55087280273438,
+            35.77632158606727
+        ]
+    ],
+    "_id": "53e2c2b2205daa3a38e85b20"
+    }
+  </pre>
+
+  #### Request
+  $ DELETE http://localhost:3000/bikeroutes
+
+  Currently broken. deletes everything.
